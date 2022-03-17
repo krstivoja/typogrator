@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Test</h1>
+
+    <input id="content" class="content" type="text">
+
+    <button onclick="myFunction()">Update</button>
+
+    <div    id="text" 
+            style="margin-top: 20px; border: 2px solid lightblue; padding: 10px;">                
+                
+            Test
+    </div>
+
+    <script>
+        
+        // Vars
+        var content = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.';        
+        let div = document.getElementById('container');
+        // let passContent = document.getElementById("content").value;
+
+        // Run on page load
+        document.getElementById("content").value = content;
+        let passContent = document.getElementById("content").value;
+
+        // Functions / Run on action
+        function myFunction() {
+            let updateText = document.getElementById("content").value; 
+            const text = document.getElementById("text")
+            text.innerHTML = updateText;
+            
+        }
+
+        
+
+        
+    </script>
+</body>
+</html>
+
