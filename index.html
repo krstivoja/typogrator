@@ -4,40 +4,101 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Test</h1>
+    <h1>Typogrator</h1>
 
-    <input id="content" class="content" type="text">
+    <div class="section">
 
-    <button onclick="myFunction()">Update</button>
+        <p>Change Text</p>
+        <input id="content" class="content" type="text">
+    
+        <button 
+            class="btn btn--outline"
+            onclick="updateContent()">Update Text</button>
 
-    <div    id="text" 
-            style="margin-top: 20px; border: 2px solid lightblue; padding: 10px;">                
-                
-            Test
     </div>
+
+    <div class="section">
+        <p>
+            <label for="fname">Base Font Size:</label>
+            <input id="viewport--min" class="viewport--min" type="text">
+        </p>
+        
+        <p>
+            <label for="fname">Min Viewport Size:</label>
+            <input id="viewport--min" class="viewport--min" type="text">
+        </p>
+        
+        <p>
+            <label for="fname">Max Viewport Size:</label>
+            <input id="viewport--max" class="viewport--max" type="text">
+        </p>
+        
+        <p>
+            <label for="fname">Min Font Size:</label>
+            <input id="font-size--min" class="font-size--min" type="text">
+        </p>
+        
+        <p>
+            <label for="fname">Min Font Size:</label>
+            <input id="font-size--max" class="font-size--max" type="text">
+        </p>
+        
+        
+        <p>
+            <label for="fname">Ratio:</label>
+            <select id="font-ratio">
+                <option value="volvo">Goldern Ration</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+              </select>
+        </p>
+        
+        
+    </div>
+
+    <div class="section">
+        
+        <h1    id="text">                
+            
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </h1>
+
+        <h2    id="text">                
+            
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </h2>
+        
+        <h3    id="text">                
+            
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </h3>
+
+    </div>
+    
+
 
     <script>
         
         // Vars
         var content = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.';        
         let div = document.getElementById('container');
-        // let passContent = document.getElementById("content").value;
 
         // Run on page load
         document.getElementById("content").value = content;
         let passContent = document.getElementById("content").value;
 
         // Functions / Run on action
-        function myFunction() {
+        function updateContent() {
             let updateText = document.getElementById("content").value; 
             const text = document.getElementById("text")
             text.innerHTML = updateText;
             
         }
-
         
 
         

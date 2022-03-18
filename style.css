@@ -1,0 +1,27 @@
+body {
+  background-color: #f2eee4;
+}
+
+input {
+  padding: 10px;
+}
+
+label {
+  min-width: 150px;
+  display: inline-block;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 2px solid blue;
+  outline: 0;
+  border-radius: 2px;
+  background: blue;
+  color: white;
+}
+
+.section {
+  border: 2px solid #dfdbd0;
+  padding: 20px;
+  margin-bottom: 20px;
+}
