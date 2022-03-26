@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="node_modules/alpinejs/dist/cdn.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <div class="blok-one" x-data=" { text: '', text2: '', open: false   }">
+
+
+        <h1>Input and Display Message</h1>
+        
+        <input type="text" placeholder="Enter a message" x-model="text">
+        <input type="text" placeholder="Enter a message" x-model="text2">    
+    
+        <button x-on:click="open = ! open">Show Result</button>
+
+
+        <h2 style="border: 2px solid grey;" x-show="open">
+            <span x-text="text + ' ' + text2">Type text in input</span>
+        </h2>
+
+        
+
+    </div>
+
+
+</body>
+</html>
