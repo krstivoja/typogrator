@@ -8,6 +8,7 @@
   "repository": {},
   "private": true,
   "dependencies": {
-    "alpinejs": "^3.9.4"
+    "alpinejs": "^3.9.4",
+    "prismjs": "^1.27.0"
   }
 }

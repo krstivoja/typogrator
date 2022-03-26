@@ -4,105 +4,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <h1>Typogrator</h1>
+    <div class="wrap">
+        
+        <div id="settings">
 
-    <div class="section">
+            <!-- <div id="settings--base">
 
-        <p>Change Text</p>
-        <input id="content" class="content" type="text">
-    
-        <button 
-            class="btn btn--outline"
-            onclick="updateContent()">Update Text</button>
+            </div>   -->
+
+            <div id="settings--min" class="settings-part">
+                <h2>Min Values</h2>
+                <div class="settings-block">
+                    <label for="">Viewpost</label>
+                    <input type="text">
+                </div>
+                <div class="settings-block">
+                    <label for="">Font Size</label>
+                    <input type="text">
+                </div>
+                <div class="settings-block">
+                    <label for="">Ratio</label>
+                    <select name="" id="ratio" x-model="chooseRatio">
+                        <option value="1.5">Select Ratio (Default 1.5)</option>
+                        <option value="1.067">1.067 - minorSecond</option>
+                        <option value="1.125">1.125 - majorSecond</option>
+                        <option value="1.2">1.2 - minorThird</option>
+                        <option value="1.25">1.25 - majorThird</option>
+                        <option value="1.333">1.333 - perfectFourth</option>
+                        <option value="1.414">1.414 - augFourth</option>
+                        <option value="1.5">1.5 - perfectFifth</option>
+                        <option value="1.6">1.6 - minorSixth</option>
+                        <option value="1.618">1.618 - goldenSection</option>
+                        <option value="1.667">1.667 - majorSixth</option>
+                        <option value="1.778">1.778 - minorSeventh</option>
+                        <option value="1.875">1.875 - majorSeventh</option>
+                        <option value="2">2 - octave</option>
+                        <option value="2.5">2.5 - majorTenth</option>
+                        <option value="2.667">2.667 - majorEleventh</option>
+                        <option value="3">3 - majorTwelfth</option>
+                        <option value="4">4 - doubleOctave</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="settings--max">
+                <h2>Max Values</h2>
+                <div class="settings-block">
+                    <label for="">Viewpost</label>
+                    <input type="text">
+                </div>
+                <div class="settings-block">
+                    <label for="">Font Size</label>
+                    <input type="text">
+                </div>
+                <div class="settings-block">
+                    <label for="">Ratio</label>
+                    <select name="" id="ratio" x-model="chooseRatio">
+                        <option value="1.5">Select Ratio (Default 1.5)</option>
+                        <option value="1.067">1.067 - minorSecond</option>
+                        <option value="1.125">1.125 - majorSecond</option>
+                        <option value="1.2">1.2 - minorThird</option>
+                        <option value="1.25">1.25 - majorThird</option>
+                        <option value="1.333">1.333 - perfectFourth</option>
+                        <option value="1.414">1.414 - augFourth</option>
+                        <option value="1.5">1.5 - perfectFifth</option>
+                        <option value="1.6">1.6 - minorSixth</option>
+                        <option value="1.618">1.618 - goldenSection</option>
+                        <option value="1.667">1.667 - majorSixth</option>
+                        <option value="1.778">1.778 - minorSeventh</option>
+                        <option value="1.875">1.875 - majorSeventh</option>
+                        <option value="2">2 - octave</option>
+                        <option value="2.5">2.5 - majorTenth</option>
+                        <option value="2.667">2.667 - majorEleventh</option>
+                        <option value="3">3 - majorTwelfth</option>
+                        <option value="4">4 - doubleOctave</option>
+                    </select>
+                </div>
+            </div>
+
+
+        </div>
 
     </div>
-
-    <div class="section">
-        <p>
-            <label for="fname">Base Font Size:</label>
-            <input id="viewport--min" class="viewport--min" type="text">
-        </p>
-        
-        <p>
-            <label for="fname">Min Viewport Size:</label>
-            <input id="viewport--min" class="viewport--min" type="text">
-        </p>
-        
-        <p>
-            <label for="fname">Max Viewport Size:</label>
-            <input id="viewport--max" class="viewport--max" type="text">
-        </p>
-        
-        <p>
-            <label for="fname">Min Font Size:</label>
-            <input id="font-size--min" class="font-size--min" type="text">
-        </p>
-        
-        <p>
-            <label for="fname">Min Font Size:</label>
-            <input id="font-size--max" class="font-size--max" type="text">
-        </p>
-        
-        
-        <p>
-            <label for="fname">Ratio:</label>
-            <select id="font-ratio">
-                <option value="volvo">Goldern Ration</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
-              </select>
-        </p>
-        
-        
-    </div>
-
-    <div class="section">
-        
-        <h1    id="text">                
-            
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </h1>
-
-        <h2    id="text">                
-            
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </h2>
-        
-        <h3    id="text">                
-            
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </h3>
-
-    </div>
-    
-
-
-    <script>
-        
-        // Vars
-        var content = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.';        
-        let div = document.getElementById('container');
-
-        // Run on page load
-        document.getElementById("content").value = content;
-        let passContent = document.getElementById("content").value;
-
-        // Functions / Run on action
-        function updateContent() {
-            let updateText = document.getElementById("content").value; 
-            const text = document.getElementById("text")
-            text.innerHTML = updateText;
-            
-        }
-        
-
-        
-    </script>
 </body>
 </html>
-

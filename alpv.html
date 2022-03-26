@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/prismjs/themes/prism.min.css">
     <link rel="stylesheet" href="style.css">
 
     <script defer src="node_modules/alpinejs/dist/cdn.js"></script>
+
 
     <title>Document</title>
 </head>
 <body>
 
+    <nav>
+        <a href="alpv.html">Alpine.JS</a>
+        <a href="examples.html">Alpine.JS</a>
+        <a href="index.html">Alpine.JS</a>
+    </nav>
 
 
-    <div class="blok-one" x-data=" { text: '', text2: '', open: false   }">
+    <div class="blok-one" x-data=" { text: '', text2: '', open: false,  chooseRatio: 1.5  }">
 
 
         <h1>Input and Display Message</h1>
@@ -30,9 +37,46 @@
         </h2>
 
         
+        <!-- <select name="" id="ratio" x-model="chooseRatio">
+            <option value="1.5">Select Ratio (Default 1.5)</option>
+            <option value="1.067">1.067 - minorSecond</option>
+            <option value="1.125">1.125 - majorSecond</option>
+            <option value="1.2">1.2 - minorThird</option>
+            <option value="1.25">1.25 - majorThird</option>
+            <option value="1.333">1.333 - perfectFourth</option>
+            <option value="1.414">1.414 - augFourth</option>
+            <option value="1.5">1.5 - perfectFifth</option>
+            <option value="1.6">1.6 - minorSixth</option>
+            <option value="1.618">1.618 - goldenSection</option>
+            <option value="1.667">1.667 - majorSixth</option>
+            <option value="1.778">1.778 - minorSeventh</option>
+            <option value="1.875">1.875 - majorSeventh</option>
+            <option value="2">2 - octave</option>
+            <option value="2.5">2.5 - majorTenth</option>
+            <option value="2.667">2.667 - majorEleventh</option>
+            <option value="3">3 - majorTwelfth</option>
+            <option value="4">4 - doubleOctave</option>
+        </select> -->
+
+        <!-- <div x-text="chooseRatio"></div> -->
+        
+
+        <pre class="language-css">
+            <code class="language-css" id="result">
+                :root{
+                    --<span x-text="text"></span>: <span x-text="text2"></span>;
+                }
+            </code>
+        </pre>
+
+        <style>
+            :root{
+                    --<span x-text="text"></span>: <span x-text="text2"></span>;
+            }
+        </style>
 
     </div>
 
-
+    <!-- <script src="/node_modules/prismjs/prism.js"></script> -->
 </body>
 </html>
